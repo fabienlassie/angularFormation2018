@@ -1,0 +1,14 @@
+<div *ngIf="product !== null" class="product">
+  <span>
+    <h4>{{product.name}}</h4>
+    <p>Prix : {{product.price}} €</p>
+    <p>Catégorie : {{product.category}}</p>
+    <p>Référence : {{product.ref}}</p>
+  </span>
+  <span>
+    <img [src]="product.img" width="160px"/>
+  </span> 
+</div>
+<div *ngIf="product === null">
+  <h4>Aucun produit correspondant</h4>
+</div>

@@ -1,0 +1,29 @@
+<!--<div>
+  <h4 style="float:right;">Panier ({{nbInCart}})</h4>
+</div>-->
+
+<br/>
+
+<div class= "responsive">
+  <span>
+    <label>Prix Min : </label>
+    <input [(ngModel)]="pmin"/>
+  </span>
+  <span>
+    <label>Prix max : </label>
+    <input [(ngModel)]="pmax"/>
+  </span>
+  <span>
+    <label>Catégorie : </label>
+    <input [(ngModel)]="pcateg"/>
+  </span>
+</div>
+
+<br/>
+
+<div class= "catalogue">
+  <app-product *ngFor="let p of catalog | price:pmin:pmax | category:pcateg" [product]="p" (onAddToCart)="addToCartHandler($event)"></app-product>
+</div>
+
+
+

@@ -1,0 +1,12 @@
+<div class="product" (click)="clickProduct($event)">
+  <span>
+    <h4>{{product.name}}</h4>
+    <p>Prix : {{product.price}} €</p>
+    <p>Catégorie : {{product.category}}</p>
+    <p>Référence : {{product.ref}}</p>
+    <input (click)="clickAddToCart($event)" type="image" src="assets/addToCart.png" width=30px />
+  </span>
+  <span>
+    <img [src]="product.img" width="160px"/>
+  </span> 
+</div>

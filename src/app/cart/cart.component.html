@@ -1,0 +1,8 @@
+<div class= "cart">
+  <app-product-cart *ngFor="let p of cart" [product]="p" (onRemoveToCart)="removeToCartHandler($event)"></app-product-cart>
+</div>
+<div class="cartResume">
+  <span>Quantité Total : {{cart.length}}</span>
+  <span>Prix Total HT : {{getHT()}} €</span>
+  <span>Prix Total TTC : {{getTTC()}} €</span>
+</div>

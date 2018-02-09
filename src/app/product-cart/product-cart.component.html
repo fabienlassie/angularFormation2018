@@ -1,0 +1,4 @@
+<div class="productCard" (click)="clickProduct($event)">
+  <span>{{product.name}}</span>
+  <span style="text-align: right;">{{product.price}} € <input (click)="clickRemove($event)" type="image" src="assets/remove.jpg" width="20px"/></span>
+</div>

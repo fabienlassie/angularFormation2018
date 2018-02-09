@@ -1,0 +1,14 @@
+.cart, .cartResume {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: silver;  
+    margin-top: 20px;  
+}
+
+.cartResume {
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    align-items: center;
+}
