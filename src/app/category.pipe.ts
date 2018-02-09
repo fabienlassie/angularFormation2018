@@ -1,9 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { ProductVo } from './product-vo';
 
-@Pipe({
-  name: 'category'
-})
+@Pipe({name: 'category'})
 export class CategoryPipe implements PipeTransform {
   transform(products: Array<ProductVo>, category: string): any {
     const results: Array<ProductVo> = new Array<ProductVo>();

@@ -1,17 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { myModuleConfig } from '../conf.spec';
 import { ProductCartComponent } from './product-cart.component';
 
 describe('ProductCartComponent', () => {
   let component: ProductCartComponent;
   let fixture: ComponentFixture<ProductCartComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ProductCartComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async(myModuleConfig));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProductCartComponent);

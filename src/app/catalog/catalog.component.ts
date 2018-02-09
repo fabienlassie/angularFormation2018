@@ -30,14 +30,11 @@ export class CatalogComponent implements OnInit {
     this.productService.fetchAll().then((products: Array<ProductVo>): void => {
       this.catalog = products;
     });
-  }
 
-  /** Initialisation des données (V2) */
-  /*public ngOnInit(): void {
-    this.productService.fetchAll2().subscribe((products: Array<ProductVo>): void => {
-      this.catalog = products;
-    });
-  }*/
+    this.productService.fetchProductsInPromo().subscribe((promos: Array<ProductVo>): void => {
+      console.log(promos);
+    })
+  }
 
   /** Ajout d'un produit au panier via le CartService */
   public addToCartHandler(product: ProductVo): void {
